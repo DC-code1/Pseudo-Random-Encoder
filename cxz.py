@@ -1,25 +1,33 @@
 import random
-def main():
-    create_code_list()
-    encode()
+random.seed(202090)
+table1 = []
+for i in range(26):
+    table1.append(i)
+print(table1)
 
-def create_code_list():
-    import random
-    user = int(input('Enter a number: '))
-    random.seed(user)
-    letter = 'abcdefghijklmnopqrstuvwxyz'
-    drn = (random.sample(range(0,26),len(letter)))
-    print (drn)
-    return drn
+letter = 'abcdefghijklmnopqrstuvwxyz'
+letter_list = list(letter)
+dict1 = dict(zip(table1,letter_list))
 
-def encode():
-    letter = 'abcdefghijklmnopqrstuvwxyz'
-    string = input('Enter a string: ')
-    string_list = list(string)
-    c = {}
-    for i in range(len(string_list)):
-        c[string_list[i]] = letter[i]
-    
+table2 = []
+num = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,
+14,15,16,17,18,19,20,21,22,23,24,25]
+numran = random.shuffle(num)
+print(num[2])
+dict2 = dict(zip(table1,num))
+message =  list("Hello")
+#print(message.count('l'))
+key_list = list(dict1.keys())
+val_list = list(dict1.values())
+position = val_list.index('d')
+#print(key_list[position])
+
+for i in range(len(message)):
+    nummessage = num[i]
+    #print(nummessage,end=' ')
+    print(val_list[nummessage].upper(),end=' ')
         
 
-main()    
+
+
+
