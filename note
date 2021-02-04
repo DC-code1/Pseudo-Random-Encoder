@@ -40,9 +40,15 @@ for i in range(len(message)):
     if letters.find(message[i]):
         print()
     #print(message[i])
-
+#####
+for i in range(len(message)):
+    if message[i].lower() in letter :
+        #nummessage = num[i]
+        #print(nummessage,end=' ')
         
-
+        print(val_list[num[i]].upper(),end='')
+    else:
+        print(message.upper()[i],end='')
 
 
 
