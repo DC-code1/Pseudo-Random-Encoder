@@ -27,6 +27,20 @@ for i in range(len(message)):
     #print(nummessage,end=' ')
     print(val_list[nummessage].upper(),end=' ')
 
+message = 'hello worlD!'
+mlist = list(message)
+letters = 'abcdefghijklmnopqrstuvwxyz'
+llist = list(letters)
+for i in range(len(message.lower())):
+    if message[i] in llist:
+        print(message[i],end='')
+    else:
+        print(message.lower()[i],end=' ')
+for i in range(len(message)):
+    if letters.find(message[i]):
+        print()
+    #print(message[i])
+
         
 
 
